@@ -35,8 +35,16 @@ sam local start-api 来启动web服务，测试接口
 http://127.0.0.1:3000/dice
 
 
+## deploy to aws
+```
+sam build
+sam deploy --guided 首次发布  非首次不用--guided
+```
+
+https://2ia9xa6106.execute-api.us-east-2.amazonaws.com/Prod/dice/
+
 ## show logs in terminal
 
 ```
-sam logs --name HelloWorldFunction --stack-name sam-learn-project --region us-east-2 --tail
+sam logs --name RollADiceFunction --stack-name sam-learn-project --region us-east-2 --tail
 ```
