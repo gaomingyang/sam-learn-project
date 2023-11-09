@@ -25,6 +25,21 @@ Resources:
           Properties:
             Path: /hello
             Method: get
+  
+  RollADiceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: roll-dice/
+      Handler: app.lambdaHandler
+      Runtime: nodejs18.x
+      Architectures:
+        - x86_64
+      Events:
+        RollADiceApi:
+          Type: Api
+          Properties:
+            Path: /dice
+            Method: get
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
