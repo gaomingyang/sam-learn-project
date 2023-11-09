@@ -12,11 +12,13 @@
  */
 
 export const lambdaHandler = async (event, context) => {
+    console.log("Run Hello world Function!")
+    // console.log("event:",event)
     try {
         return {
             'statusCode': 200,
             'body': JSON.stringify({
-                message: 'hello world',
+                message: 'hello my life',
             })
         }
     } catch (err) {
